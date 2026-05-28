@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percorso - Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .experience-item {
+            margin-bottom: 64px;
+            padding-bottom: 64px;
+            border-bottom: 1px solid var(--border);
+        }
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .experience-role {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .experience-company {
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 24px;
+            display: block;
+        }
+        .experience-desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .experience-bullets {
+            list-style: none;
+            padding: 0;
+        }
+        .experience-bullets li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+        .experience-bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="logo">Toni<span>Cara</span>.</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">Chi Sono</a></li>
+            <li><a href="percorso.html">Percorso</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <main class="projects-main">
+        <!-- Hero Section -->
+        <header class="projects-hero fade-in">
+            <span class="label-heading">Professional Journey</span>
+            <h1 class="title">ESPERIENZA E <br> COMPETENZE.</h1>
+            <p class="subtitle">La Struttura del mio percorso formativo e professionale. Dalle aule universitarie ai laboratori di sicurezza informatica.</p>
+        </header>
+
+        <!-- Experience List -->
+        <section class="fade-in" style="margin-top: 64px; padding: 0 24px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            
+            <div class="experience-item">
+                <h3 class="experience-role">Studente di Ingegneria Informatica</h3>
+                <span class="experience-company">UNIVERSITÀ DEGLI STUDI DI PAVIA (In Corso)</span>
+                <p class="experience-desc">Sviluppo di solide basi in matematica, fisica e informatica. Approfondimento su architetture hardware, sistemi operativi e ingegneria del software.</p>
+                <ul class="experience-bullets">
+                    <li>Sviluppo di progetti accademici in C, Java e Python.</li>
+                    <li>Studio approfondito dei protocolli di rete (TCP/IP, DNS, HTTP).</li>
+                    <li>Membro attivo del team universitario per le competizioni di CyberChallenge.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-role">Cybersecurity Enthusiast</h3>
+                <span class="experience-company">INDEPENDENT / FREELANCE</span>
+                <p class="experience-desc">Pratica continua e ricerca autonoma nel campo della difensive security. Partecipazione attiva su piattaforme di training e sviluppo di tool custom.</p>
+                <ul class="experience-bullets">
+                    <li>Partecipazione attiva a competizioni CTF (Capture The Flag). Partecipante alla competizione <a href="https://cyberchallenge.it/" style="color: var(--accent)">CyberChallenge.it</a> (Edizione 2026).</li>
+                    <li>Sviluppo di script Bash e Python per l'automazione di task di OSINT e scansione.</li>
+                    <li>Studio di vulnerabilità Web (OWASP Top 10, SQLi, XSS, CSRF).</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Skills Section -->
+        <section class="fade-in" style="margin-top: 120px; padding: 0 24px; max-width: 1280px; margin-left: auto; margin-right: auto;">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <span class="label-heading">Core Competencies</span>
+                <h2 class="title" style="font-size: 40px; margin-top: 16px;">ARSENALE <span class="text-accent">TECNICO</span></h2>
+                <p class="subtitle" style="margin: 24px auto 0;">Un toolkit in continua evoluzione basato sullo studio rigoroso e sulla sperimentazione pratica.</p>
+            </div>
+
+            <div class="editorial-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <!-- Skill Category 1 -->
+                <div class="bento-item" style="border: 1px solid var(--border); background: transparent;">
+                    <h3 class="info-main" style="margin-bottom: 24px; font-size: 20px;">Cybersecurity</h3>
+                    <ul class="experience-bullets">
+                        <li>Penetration Testing</li>
+                        <li>Network Traffic Analysis</li>
+                        <li>Vulnerability Scanning</li>
+                        <li>Web App Security (OWASP)</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 2 -->
+                <div class="bento-item" style="border: 1px solid var(--border); background: transparent;">
+                    <h3 class="info-main" style="margin-bottom: 24px; font-size: 20px;">Software Engineering</h3>
+                    <ul class="experience-bullets">
+                        <li>Python & Bash Scripting</li>
+                        <li>C / C++</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>Assembly</li>
+                        <li>Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 3 -->
+                <div class="bento-item" style="border: 1px solid var(--border); background: transparent;">
+                    <h3 class="info-main" style="margin-bottom: 24px; font-size: 20px;">System & Network</h3>
+                    <ul class="experience-bullets">
+                        <li>Linux Server Administration</li>
+                        <li>TCP/IP & Routing</li>
+                        <li>Docker & Containerization</li>
+                        <li>Git & Version Control</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="projects-cta fade-in" style="margin-top: 120px;">
+            <h2 class="info-main" style="margin-bottom: 24px;">PRONTO PER NUOVE SFIDE?</h2>
+            <p class="subtitle" style="margin: 0 auto 48px;">Cerco opportunità di stage o collaborazioni per mettere in pratica le mie competenze in ambito software e cybersecurity.</p>
+            <div class="cta-group justify-center">
+                <a href="contatti.html" class="btn btn-primary">Contattami Ora</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">TONI CARA</div>
+            <div class="footer-copy">© 2026 TONICARA.</div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/toni-cara-85a285234">LinkedIn</a>
+                <a href="https://github.com/ToniCara">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
