@@ -149,9 +149,18 @@ h1, h2, h3, .logo, .info-main { font-family: var(--f-head); }
 .bento-image-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
 .bento-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.5s; }
 
+.gallery-mosaic { display: grid; grid-template-rows: 1.4fr 0.8fr; gap: 8px; width: 100%; height: 100%; }
+.gallery-top, .gallery-bottom { width: 100%; min-height: 0; overflow: hidden; }
+.gallery-bottom { display: grid; grid-template-columns: auto auto; gap: 8px; }
+.gallery-mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 4px; }
+
 .aspect-16-9 { aspect-ratio: 16/9; }
 .aspect-square { aspect-ratio: 1/1; }
 .bento-content { margin-top: 24px; }
+
+@media (max-width: 768px) {
+    .gallery-bottom { grid-template-columns: 1fr; }
+}
 .bento-content .info-main { margin: 16px 0 8px; }
 .bento-content p { color: var(--text-secondary); opacity: 0.8; }
 .bento-client { border-left: 1px solid var(--border); padding-left: 24px; text-align: right; display: flex; flex-direction: column; }
@@ -174,7 +183,7 @@ h1, h2, h3, .logo, .info-main { font-family: var(--f-head); }
 /* Home Page specific layouts */
 .hero-grid { display: grid; gap: 64px; align-items: center; }
 .hero-visual { position: relative; height: 600px; display: none; }
-.visual-card { position: absolute; inset: 0; background: var(--bg-surface); border: 1px solid var(--border); overflow: hidden; z-index: 2; }
+.visual-card { position: absolute; inset: 0; background: var(); border: 1px solid var(--border); overflow: hidden; z-index: 2; }
 .visual-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity; transition: transform 0.7s ease, filter 0.7s ease; }
 .bento-item:hover .visual-card img, .visual-card img:hover { transform: scale(1.05); filter: grayscale(0) !important; }
 .visual-glow { position: absolute; bottom: -32px; left: -32px; width: 128px; height: 128px; background: var(--accent); opacity: 0.1; filter: blur(32px); z-index: 1; }
